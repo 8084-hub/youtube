@@ -1,73 +1,56 @@
+<!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>YouTube Frontend Clone</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="topbar__left">
+        <button class="icon-btn" id="menuToggle" aria-label="Toggle menu">☰</button>
+        <div class="brand">
+          <span class="brand__logo">▶</span>
+          <span class="brand__text">YouTube</span>
+        </div>
+      </div>
+      <div class="topbar__center">
+        <div class="searchbar">
+          <input id="searchInput" type="text" placeholder="Search" />
+          <button id="searchBtn" aria-label="Search">🔍</button>
+        </div>
+      </div>
+      <div class="topbar__right">
+        <button class="icon-btn" aria-label="Create">＋</button>
+        <button class="icon-btn" aria-label="Notifications">🔔</button>
+        <div class="avatar">U</div>
+      </div>
+    </header>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
-        integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
-        crossorigin="anonymous" />
-    <title>Menu Design</title>
-</head>
+    <main class="layout">
+      <aside class="sidebar" id="sidebar">
+        <button class="sidebar__item active">Home</button>
+        <button class="sidebar__item">Shorts</button>
+        <button class="sidebar__item">Subscriptions</button>
+        <hr />
+        <button class="sidebar__item">Library</button>
+        <button class="sidebar__item">History</button>
+        <button class="sidebar__item">Your videos</button>
+      </aside>
 
-<body>
-    <div class="topbar">
-        <div class="topbar-left">
-            <i class="logo fas fa-igloo"></i>
-            <h1>Igloo</h1>
-        </div>
-        <div class="topbar-center">
-            <div class="topbar-search">
-                <i class="search-icon fas fa-search"></i>
-                <input type="text" placeholder="Search...">
-            </div>
-        </div>
-        <div class="topbar-right">
-            <div class="line-container">
-                <div class="line line-1"></div>
-                <div class="line line-2"></div>
-                <div class="line line-3"></div>
-            </div>
-        </div>
-    </div>
-    <div class="menu">
-        <div class="menu-top">
-            <div class="menu-search">
-                <i class="search-icon fas fa-search"></i>
-                <input type="text" placeholder="Search">
-            </div>
-        </div>
-        <div class="menu-center">
-            <div class="menu-item">
-                <i class="fas fa-home"></i>
-                <span>Home</span>
-            </div>
-            <div class="menu-item">
-                <i class="fas fa-paper-plane"></i>
-                <span>Pages</span>
-            </div>
-            <div class="menu-item">
-                <i class="fas fa-user-friends"></i>
-                <span>Groups</span>
-            </div>
-            <div class="menu-item">
-                <i class="fas fa-users"></i>
-                <span>People</span>
-            </div>
-            <div class="menu-item">
-                <i class="fas fa-bullhorn"></i>
-                <span>Updates</span>
-            </div>
-        </div>
-        <div class="menu-bottom">
-            <div class="menu-bottom-user">
-                <img src="https://images.pexels.com/photos/5944321/pexels-photo-5944321.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500"
-                    alt="">
-                <span>John Doe</span>
-            </div>
-            <i class="far fa-question-circle"></i>
-        </div>
-    </div>
+      <section class="content">
+        <div class="chips" id="chips"></div>
+        <div class="video-grid" id="videoGrid"></div>
+      </section>
+    </main>
+
     <script src="app.js"></script>
-</body>
+  </body>
 </html>
